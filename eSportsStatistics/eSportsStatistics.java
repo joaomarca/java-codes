@@ -2,7 +2,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SportStatistics {
+public class eSportStatistics {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -73,7 +73,6 @@ public class SportStatistics {
 
         return gameWins;
     }
-
 
     public static int searchTeamLosses(ArrayList<Game> games, String team) {
         int gameLosses = 0;
