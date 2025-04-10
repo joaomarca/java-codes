@@ -1,18 +1,21 @@
 import java.util.Scanner;
 
-public class Main(String[] args<>) {
+public class Main  {
+    public static void main(String[] args){
 
-    Clock clock = new Clock;
+        Clock clock = new Clock();
 
-     while (true) {
-        System.out.println(clock);
-        clock.advance();
+        while (true) {
+            System.out.println(clock);
+            clock.advance(1);
 
-        try {
-            Thread.sleep(100);
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            try {
+                Thread.sleep(300);
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
+
     }
 
 }

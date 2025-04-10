@@ -1,4 +1,4 @@
-public class Clock() {
+public class Clock {
     private clockHand seconds;
     private clockHand minutes;
     private clockHand hours;
@@ -9,8 +9,8 @@ public class Clock() {
         this.hours = new clockHand(24);
     }
 
-    public void advance() {
-        this.seconds.advance();
+    public void advance(int value) {
+        this.seconds.advance(value);
 
         if (this.seconds.getValue() == 0) {
             this.minutes.advance();
@@ -21,9 +21,13 @@ public class Clock() {
         }
     }
 
+    public void advance() {
+        this.advance(1);
+    }
+
     @Override
     public String toString() {
-        return this.hours.getValue() + ":" + this.minutes.getValue() + ":" + this.hours.getValue();
+        return this.hours.getTime() + ":" + this.minutes.getTime() + ":" + this.seconds.getTime();
     }
-    
+
 }
